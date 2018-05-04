@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>pgina</id>
+    <version>3.1.8.0</version>
+    <packageSourceUrl>https://github.com/natpowning/pgina-chocolatey.git</packageSourceUrl>
+    <owners>Nat Powning</owners>
+    <title>pGina</title>
+    <authors>Nate Yocom, David Wolff</authors>
+    <projectUrl>http://pgina.org</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <tags>pgina</tags>
+    <summary>pGina Authentication Provider</summary>
+    <description>This replaces the default windows authenticator with a provider configured to use ldap.aws.trustvesta.local for credential verification.</description>
+  </metadata>
+
+  <files>
+    <file src="tools/**" target="tools" />
+  </files>
+</package>
+
