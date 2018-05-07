@@ -17,6 +17,7 @@
     <docsUrl>https://github.com/pgina/pgina/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/pgina/pgina/issues</bugTrackerUrl>
     <iconUrl>https://cdn.rawgit.com/natpowning/pgina-chocolatey/dc5a638ce52348c6e0d67300062bf0b76b2c194e/pginalogo.png</iconUrl>
+    <releaseNotes>[pGina CHANGELOG](https://github.com/pgina/pgina/blob/master/CHANGELOG.md)</releaseNotes>
 
     <tags>pgina</tags>
     <summary>pGina Authentication Provider</summary>
