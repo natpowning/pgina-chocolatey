@@ -21,7 +21,7 @@
 
     <tags>pgina</tags>
     <summary>pGina Authentication Provider</summary>
-    <description>This replaces the default windows authenticator with a provider configured to use ldap.aws.trustvesta.local for credential verification.</description>
+    <description>This replaces the default windows authenticator using various plugins (LDAP/Radius/etc.) for credential verification.</description>
   </metadata>
 
   <files>
