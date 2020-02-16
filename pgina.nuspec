@@ -3,7 +3,7 @@
   <metadata>
     <id>pgina</id>
     <title>pGina</title>
-    <version>3.1.8.001</version>
+    <version>3.1.8.002</version>
 
     <packageSourceUrl>https://github.com/natpowning/pgina-chocolatey</packageSourceUrl>
 
@@ -22,6 +22,9 @@
     <tags>pgina</tags>
     <summary>pGina Authentication Provider</summary>
     <description>This replaces the default windows authenticator using various plugins (LDAP/Radius/etc.) for credential verification.</description>
+    <dependencies>
+      <dependency id="vcredist2012" />
+    </dependencies>
   </metadata>
 
   <files>
