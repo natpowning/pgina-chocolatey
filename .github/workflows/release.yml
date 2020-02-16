@@ -1,0 +1,39 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+
+    runs-on: windows-2019
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build the nuget
+      run: choco pack
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+    - uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./pgina.3.1.8.002.nupkg
+        asset_name: pgina.3.1.8.002.nupkg
+        asset_content_type: application/octet-stream
+    - name: Push to chocolatey.org
+      run: |
+          choco apikey --key ${{ secrets.API_KEY_CHOCOLATEY_ORG }} --source https://push.chocolatey.org/
+          choco push pgina.3.1.8.002.nupkg --source https://push.chocolatey.org/
+ 
