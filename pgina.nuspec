@@ -23,6 +23,8 @@
     <summary>pGina Authentication Provider</summary>
     <description>This replaces the default windows authenticator using various plugins (LDAP/Radius/etc.) for credential verification.</description>
     <dependencies>
+      <dependency id="dotnet4.0" />
+      <dependency id="vcredist2010" />
       <dependency id="vcredist2012" />
     </dependencies>
   </metadata>
