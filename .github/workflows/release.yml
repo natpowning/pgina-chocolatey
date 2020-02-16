@@ -29,11 +29,11 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./pgina.3.1.8.002.nupkg
-        asset_name: pgina.3.1.8.002.nupkg
+        asset_path: ./pgina.3.1.8.004.nupkg
+        asset_name: pgina.3.1.8.004.nupkg
         asset_content_type: application/octet-stream
     - name: Push to chocolatey.org
       run: |
           choco apikey --key ${{ secrets.API_KEY_CHOCOLATEY_ORG }} --source https://push.chocolatey.org/
-          choco push pgina.3.1.8.002.nupkg --source https://push.chocolatey.org/
+          choco push pgina.3.1.8.004.nupkg --source https://push.chocolatey.org/
  
