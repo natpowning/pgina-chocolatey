@@ -9,7 +9,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Install Chocolatey
+    - name: Build and install
       run: | 
-          choco -h
+          choco pack
+          choco install pgina
 
