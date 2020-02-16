@@ -12,5 +12,5 @@ jobs:
     - name: Build and install
       run: | 
           choco pack
-          choco install pgina
+          choco install pgina --source="'.;chocolatey'"
 
